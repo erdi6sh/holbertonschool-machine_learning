@@ -19,7 +19,7 @@ def matrix_transpose(matrix):
     # Step 3: fill the new matrix with transposed elements
     for i in range(m):          # iterate over rows of original matrix
         for j in range(n):      # iterate over columns of original matrix
-            new_matrix[j][i] = matrix[i][j]  
+            new_matrix[j][i] = matrix[i][j]
 # place element in transposed position
     # Step 4: return the new transposed matrix
     return new_matrix
