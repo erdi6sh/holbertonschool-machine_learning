@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-""" """
+"""
+This module contains a function `matrix_shape` that calculates
+the shape of a matrix (nested lists) and returns it as a list of integers.
+"""
 
 
 def matrix_shape(matrix):
-    # Step 1: prepare a list to store the shape
+    """
+    Calculates the shape of a matrix (list of lists).
+    Returns a list of integers representing the size of each dimension.
+    """
     shape = []
 
     # Step 2: create an infinite loop (we'll break manually)
