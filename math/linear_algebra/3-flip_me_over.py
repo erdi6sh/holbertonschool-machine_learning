@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-""" """
+"""
+This module contains a function `matrix_transpose` that returns
+the transpose of a 2D matrix. The function creates a new matrix
+with rows and columns swapped.
+"""
 
-
-def matrix_transpose(matrix):
-    # Step 1: get dimensions of original matrix
+ddef matrix_transpose(matrix):
+    """
+    Returns a new 2D matrix that is the transpose of the input matrix.
+    """
     m = len(matrix)        # number of rows
     n = len(matrix[0])     # number of columns
 
