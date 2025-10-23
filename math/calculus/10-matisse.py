@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Module 10-matisse
-Calculates the derivative of a polynomial represented by a list of coefficients.
+Calculates the derivative of a polynomial represented by a list of coefficients
 """
 
 
