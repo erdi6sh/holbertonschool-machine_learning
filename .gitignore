@@ -1,0 +1,7 @@
+# Ignore CSV and Excel datasets
+*.csv
+*.xlsx
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
