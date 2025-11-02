@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module that concatenates two DataFrames with labeled keys."""
 
-import pandas as pd
+
 index = __import__('10-index').index
 
 

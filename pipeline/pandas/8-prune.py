@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Module that removes rows with NaN values in the Close column."""
 
-import pandas as pd
-
 
 def prune(df):
     """

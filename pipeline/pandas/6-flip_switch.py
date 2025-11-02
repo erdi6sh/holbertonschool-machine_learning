@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Module that sorts and transposes a DataFrame."""
 
-import pandas as pd
-
 
 def flip_switch(df):
     """

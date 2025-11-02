@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Module that fills missing values and removes Weighted_Price column."""
 
-import pandas as pd
-
 
 def fill(df):
     """

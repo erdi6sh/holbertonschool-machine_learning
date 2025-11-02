@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Module that sorts a DataFrame by the High column."""
 
-import pandas as pd
-
 
 def high(df):
     """

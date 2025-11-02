@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Module that rearranges and concatenates two DataFrames with hierarchy."""
 
-import pandas as pd
+
 index = __import__('10-index').index
 
 
