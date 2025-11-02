@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Module that slices a DataFrame to select specific columns and rows."""
 
-import pandas as pd
-
 
 def slice(df):
     """
