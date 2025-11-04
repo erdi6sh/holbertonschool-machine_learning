@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""
-Plot y = x^3 as a solid red line with x-axis from 0 to 10.
-"""
+"""This module contains a function to plot y as a line graph."""
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 def line():
-    """Plot a cubic curve y = x^3 for x in 0..10 as a solid red line."""
-    plt.plot(y, color='red')
+    """Plots y as a line graph"""
+    y = np.arange(0, 11) ** 3
+    plt.figure(figsize=(6.4, 4.8))
+
+    # your code here
+    x = np.arange(0, 11)
+    plt.plot(x, y, 'r-')  # r = red, - = solid line
     plt.xlim(0, 10)
-    pit.show()
+    plt.show()
