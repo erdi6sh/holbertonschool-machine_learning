@@ -14,13 +14,13 @@ def gradient():
 
     # your code here
     mountain_elevation = z
-    scatter = plt.scatter(x, y, c=mountain_elevation, cmap='viridis')
+    scatter = plt.scatter(x, y, c=mountain_elevation, cmap='viridis', s=30, edgecolor='k', alpha=0.85)
     plt.xlabel("x coordinate (m)")
     plt.ylabel("y coordinate (m)")
     plt.title("Mountain Elevation")
     cbar = plt.colorbar(scatter)
-    cbar.set_label("Elevation (m)")
-    plt.colorbar("Elevation (m)")
+    cbar.set_label("elevation (m)")
+
     plt.show()
 
 
