@@ -28,7 +28,8 @@ def get_first_launch():
     # Parse UTC time then shift to fixed -04:00 offset
     dt_utc = datetime.fromisoformat(date_utc.replace('Z', '+00:00'))
     dt_local = dt_utc + timedelta(hours=-4)
-    date_local_str = dt_local.isoformat(timespec='seconds') + '-04:00'
+    # Manually format without timezone, then append -04:00
+    date_local_str = dt_local.strftime('%Y-%m-%dT%H:%M:%S') + '-04:00'
 
     rocket_id = first.get('rocket')
     launchpad_id = first.get('launchpad')
