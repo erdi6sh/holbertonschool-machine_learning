@@ -24,7 +24,8 @@ def sentientPlanets():
             classification = (item.get('classification') or '').lower()
             designation = (item.get('designation') or '').lower()
 
-            if 'sentient' not in classification and 'sentient' not in designation:
+            if ('sentient' not in classification and
+                    'sentient' not in designation):
                 continue
 
             home_url = item.get('homeworld')
