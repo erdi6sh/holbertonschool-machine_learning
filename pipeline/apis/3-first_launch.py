@@ -2,7 +2,7 @@
 """Script to display the first upcoming SpaceX launch with key information."""
 
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def get_first_launch():
@@ -25,9 +25,10 @@ def get_first_launch():
     launch_name = first.get('name', 'Unknown')
     date_utc = first.get('date_utc')
 
+    # Parse UTC time then shift to fixed -04:00 offset
     dt_utc = datetime.fromisoformat(date_utc.replace('Z', '+00:00'))
-    dt_local = dt_utc.astimezone()
-    date_local_str = dt_local.isoformat()
+    dt_local = dt_utc + timedelta(hours=-4)
+    date_local_str = dt_local.isoformat(timespec='seconds') + '-04:00'
 
     rocket_id = first.get('rocket')
     launchpad_id = first.get('launchpad')
