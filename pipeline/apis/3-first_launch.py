@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Script to display the first SpaceX launch with key information."""
+"""Script to display the first upcoming SpaceX launch with key information."""
 
 import requests
 from datetime import datetime
 
 
 def get_first_launch():
-    """Return formatted information about the first SpaceX launch."""
-    launches_url = 'https://api.spacexdata.com/v4/launches'
+    """Return formatted information about the first upcoming SpaceX launch."""
+    upcoming_url = 'https://api.spacexdata.com/v4/launches/upcoming'
     rockets_url = 'https://api.spacexdata.com/v4/rockets'
     launchpads_url = 'https://api.spacexdata.com/v4/launchpads'
 
-    launches = requests.get(launches_url).json()
+    launches = requests.get(upcoming_url).json()
     if not launches:
         return None
 
