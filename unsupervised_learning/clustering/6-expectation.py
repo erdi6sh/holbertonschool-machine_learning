@@ -3,12 +3,14 @@
     respect the conditional distribution
 """
 
+
 import numpy as np
 pdf = __import__('5-pdf').pdf
 
 
 def expectation(X, pi, m, S):
-    """Function that calculates the expectation step in the EM algorithm for a GMM"""
+    """Function that calculates the expectation step in the EM
+    algorithm for a GMM"""
     if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         return None, None
     if not isinstance(m, np.ndarray) or len(m.shape) != 2:
@@ -31,8 +33,6 @@ def expectation(X, pi, m, S):
     covariance_mat = S
     gauss_components = np.zeros((k, n))
 
- 
- 
     for i in range(k):
         likelihood = pdf(X, centroids_mean[i], covariance_mat[i])
         prior = pi[i]
