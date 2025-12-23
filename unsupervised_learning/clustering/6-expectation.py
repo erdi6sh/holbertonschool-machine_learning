@@ -50,7 +50,7 @@ def expectation(X, pi, m, S):
 
         marginal = np.sum(likelihoods, axis=0)
         g = likelihoods / marginal
-        l = np.sum(np.log(marginal))
+        l = np.sum(np.log(marginal))  # noqa: E741
 
         return g, l
     except Exception:
