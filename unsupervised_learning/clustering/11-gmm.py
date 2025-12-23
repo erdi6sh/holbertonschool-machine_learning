@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-""" GMM using scikit learn """
+"""GMM using scikit-learn"""
 
 import sklearn.mixture
 
 
 def gmm(X, k):
-    ""'calculates a GMM from a dataset"""
-    g = sklearn.mixture.GaussianMixture(n_components=k)
-    g.fit(X)
-    pi = g.weights_
-    m = g.means_
-    S = g.covariances_
-    clss = g.predict(X)
-    bic = g.bic(X)
+    """Calculates a GMM from a dataset"""
+    gmm_model = sklearn.mixture.GaussianMixture(n_components=k)
+    gmm_model.fit(X)
+
+    pi = gmm_model.weights_
+    m = gmm_model.means_
+    S = gmm_model.covariances_
+    clss = gmm_model.predict(X)
+    bic = gmm_model.bic(X)
+
     return pi, m, S, clss, bic
