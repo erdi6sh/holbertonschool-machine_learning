@@ -47,9 +47,17 @@ class Neuron:
         return self.__A
 
     def cost(self, Y, A):
+        """
+        Calculates the cost using logistic regression
 
+        Args:
+            Y: numpy array with shape (1, m) with correct labels
+            A: numpy array with shape (1, m) with activated output
+
+        Returns:
+            The cost (log loss)
+        """
         m = Y.shape[1]
-
-        log_loss = -1/m*np.sum(Y * np.log(A) + (1-Y)*(np.log(1.0000001-A)))
-
+        log_loss = -1 / m * np.sum(Y * np.log(A) +
+                                    (1 - Y) * (np.log(1.0000001 - A)))
         return log_loss
