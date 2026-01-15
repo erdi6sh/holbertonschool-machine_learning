@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-""" Task 0"""
+"""Neuron class for binary classification"""
 import numpy as np
 
 
 class Neuron:
-    def __init__(self, nx):
+    """Single neuron performing binary classification"""
 
+    def __init__(self, nx):
+        """Initialize neuron with nx input features"""
         if type(nx) is not int:
             raise TypeError("nx must be an integer")
         if nx < 1:
