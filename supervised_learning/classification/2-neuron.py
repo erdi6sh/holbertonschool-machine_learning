@@ -33,7 +33,15 @@ class Neuron:
         return self.__A
 
     def forward_prop(self, X):
+        """
+        Calculates forward propagation of the neuron
+
+        Args:
+            X: numpy array with shape (nx, m) containing input data
+
+        Returns:
+            The activated output (self.__A) using sigmoid activation
+        """
         Z = np.matmul(self.__W, X) + self.__b
         self.__A = 1 / (1 + np.exp(-Z))
-
         return self.__A
