@@ -32,7 +32,7 @@ def convolve_channels(images, kernel, padding='same', stride=(1, 1)):
 
     # Pad images
     images_padded = np.pad(images, ((0, 0), (ph, ph), (pw, pw), (0, 0)),
-                          mode='constant', constant_values=0)
+    mode='constant', constant_values=0)
 
     # Calculate output dimensions
     output_h = int((h + 2 * ph - kh) / sh) + 1
