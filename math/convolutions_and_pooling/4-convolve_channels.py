@@ -2,7 +2,7 @@
 """Module for convolution with channels"""
 import numpy as np
 
-
+#Takes an image and slides a filter (kernel) across it to detect patterns like edges, blur, or sharpen.
 def convolve_channels(images, kernel, padding='same', stride=(1, 1)):
     """
     Performs a convolution on images with channels.
