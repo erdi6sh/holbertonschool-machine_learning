@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Module for forward propagation over a pooling layer."""
 import numpy as np
 
