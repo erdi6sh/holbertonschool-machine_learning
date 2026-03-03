@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Module for flipping images.
+Random image crop function
 """
 import tensorflow as tf
 
 
-def flip_image(image):
+def crop_image(image, size):
     """
-    Flips an image horizontally.
+    Performs a random crop of an image
 
     Args:
-        image: A 3D tf.Tensor containing the image to flip
+        image: 3D tf.Tensor containing the image to crop
+        size: tuple containing the size of the crop (height, width, channels)
 
     Returns:
-        The flipped image
+        Cropped image as a tensor
     """
-    return tf.image.flip_left_right(image)
+    return tf.image.random_crop(image, size=size)
