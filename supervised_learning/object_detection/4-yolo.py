@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""Module for YOLO v3 object detection using Darknet Keras model."""
 @staticmethod
 def load_images(folder_path):
     """Load all images from a folder.
