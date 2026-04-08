@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""Module for YOLO v3 object detection using Darknet Keras model."""
 def non_max_suppression(self, filtered_boxes, box_classes, box_scores):
     """Apply non-max suppression to eliminate redundant overlapping boxes.
 
