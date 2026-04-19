@@ -30,7 +30,7 @@ class RNNCell:
             h_next: the next hidden state
             y: the output of the cell
         """
-        concat = np.concatenate((x_t, h_prev), axis=1)
+        concat = np.concatenate((h_prev, x_t), axis=1)
         h_next = np.tanh(concat @ self.Wh + self.bh)
         z = h_next @ self.Wy + self.by
         e = np.exp(z - np.max(z, axis=1, keepdims=True))
